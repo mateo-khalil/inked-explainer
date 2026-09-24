@@ -1,0 +1,29 @@
+{
+  "name": "inked-explainer-template",
+  "version": "1.0.0",
+  "description": "A hand-inked explainer film, drawn and scored entirely in code with Remotion",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "studio": "remotion studio",
+    "assets": "node scripts/textures.mjs && node scripts/make-audio.mjs",
+    "render": "remotion render InkedFilm out/film.mp4 --codec=h264 --crf=18",
+    "render:vertical": "remotion render InkedFilmVertical out/film-vertical.mp4 --codec=h264 --crf=18",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\" \"scripts/**/*.mjs\""
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.499",
+    "@remotion/google-fonts": "4.0.499",
+    "@remotion/media": "4.0.499",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.499"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.7",
+    "@types/web": "0.0.166",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3"
+  }
+}
